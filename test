@@ -1,0 +1,26 @@
+from tkinter import *
+from tkinter import messagebox
+from PIL import ImageTk, Image
+import random as r
+img = ImageTk.PhotoImage(Image.open("rock.png"))
+#rock = PhotoImage(file = r"rock.png")
+#paper = PhotoImage(file = r"paper.png")
+#scissors = PhotoImage(file = r"scissors")
+""""
+def button(frame):
+      #Funkcija za definiranje gumba
+    b=Button(frame,height=2,width=5,image = img).pack(side = TOP)
+    return b
+"""
+
+#___________________
+root=Tk()
+root.geometry("700x500")#prozor
+frame = Frame(root, width=600, height=400)
+frame.pack()
+frame.place(anchor='center', relx=0.5, rely=0.5)
+root.title("Kamen paper skare")
+label = Label(frame, image = img)
+label.pack()
+b = []
+#b.append(button.root)
