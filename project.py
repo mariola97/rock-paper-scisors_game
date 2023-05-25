@@ -2,12 +2,12 @@ from tkinter import *
 from tkinter import messagebox
 import random
 
-izbor = ["Rock" , "Paper" , "Sccissors"]
+izbor = ["Rock" , "Paper" , "Scissors"]
 
 
 root=Tk()
 #root.geometry("700x500")#prozor
-root.title("Rock, Paper, Sccissors")
+root.title("Rock, Paper, Scissors")
 igraj = Button(root, width = 20, height = 3, text = "Igraj", font = ("arial", 24, "bold"), fg = "red" , bg="grey" , command=lambda : nasumicni_izbor())
 igraj.grid( row = 1, column=1)
 label_igrac1 = Label(root, text="Igrač 1", font = ("arial", 30))
@@ -47,13 +47,13 @@ def provjera_pobjednika(igrac1 , igrac2):
             rezultat_poruka_update("Igrač 1 dobija bod")
             dodavanje_poena1()
     if (igrac1 == "Paper"):
-        if (igrac2== "Sccissors"):
+        if (igrac2== "Scissors"):
             rezultat_poruka_update("Igrač 2 dobija bod")
             dodavanje_poena2()
         else:
             rezultat_poruka_update("Igrač 1 dobija bod")
             dodavanje_poena1()
-    if (igrac1 == "Sccissors"):
+    if (igrac1 == "Scissors"):
         if (igrac2 == "Rock"):
             rezultat_poruka_update("Igrač 2 dobija bod")
             dodavanje_poena2()
